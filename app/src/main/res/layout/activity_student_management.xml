@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Khu vực tìm kiếm sinh viên -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <!-- Trường nhập thông tin tìm kiếm sinh viên -->
+        <EditText
+            android:id="@+id/edtSearchStudent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Tìm kiếm sinh viên"
+            android:inputType="text" />
+
+        <!-- Nút tìm kiếm -->
+        <Button
+            android:id="@+id/btnSearchStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tìm kiếm" />
+    </LinearLayout>
+
+    <!-- Trường nhập mã sinh viên -->
+    <EditText
+        android:id="@+id/edtStudentCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã sinh viên"
+        android:inputType="text" />
+
+    <!-- Trường nhập tên sinh viên -->
+    <EditText
+        android:id="@+id/edtStudentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên"
+        android:inputType="text" />
+
+    <!-- Trường nhập năm sinh -->
+    <EditText
+        android:id="@+id/edtStudentBirthYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Năm sinh"
+        android:inputType="number" />
+
+    <!-- Trường nhập số điện thoại -->
+    <EditText
+        android:id="@+id/edtStudentPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số điện thoại"
+        android:inputType="phone" />
+
+    <!-- Trường nhập địa chỉ -->
+    <EditText
+        android:id="@+id/edtStudentAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Địa chỉ"
+        android:inputType="text" />
+
+    <!-- Spinner chọn mã lớp -->
+    <Spinner
+        android:id="@+id/spnClassCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown" />
+
+    <!-- LinearLayout cho 3 button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center">
+
+        <!-- Button thêm sinh viên -->
+        <Button
+            android:id="@+id/btnAddStudent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thêm" />
+
+        <!-- Button xóa sinh viên -->
+        <Button
+            android:id="@+id/btnDeleteStudent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Xóa" />
+
+        <!-- Button sửa sinh viên -->
+        <Button
+            android:id="@+id/btnEditStudent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sửa" />
+    </LinearLayout>
+
+    <!-- RecyclerView hiển thị danh sách sinh viên -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewStudents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
